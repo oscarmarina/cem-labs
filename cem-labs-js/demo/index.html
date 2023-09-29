@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Demo - cem-labs-js</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta name="description" content="cem-labs-js" />
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="demo"></div>
+
+    <script type="module">
+      import { html, render } from 'lit';
+      import '../define/cem-labs-js.js';
+
+      const heading = 'World!';
+      render(
+        html`<cem-labs-js
+          highlight
+          @counterchange="${ev => console.log('==>', ev.detail)}"
+          .heading=${heading}
+          >some light-dom</cem-labs-js
+        >`,
+        document.querySelector('#demo'),
+      );
+    </script>
+  </body>
+</html>

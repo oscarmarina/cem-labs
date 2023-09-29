@@ -1,0 +1,500 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/CemLabsTs.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "![Lit](https://img.shields.io/badge/lit-2.0.0-blue)\n\n## `<cem-labs-ts>`\nAn example element.",
+          "name": "CemLabsTs",
+          "slots": [
+            {
+              "description": "This element has a slot",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "heading",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Hey there'",
+              "description": "The heading to say \"Hello\" to.",
+              "attribute": "heading"
+            },
+            {
+              "kind": "field",
+              "name": "counter",
+              "type": {
+                "text": "number"
+              },
+              "default": "5",
+              "description": "The number of times the button has been clicked.",
+              "attribute": "counter"
+            },
+            {
+              "kind": "method",
+              "name": "#onClick"
+            },
+            {
+              "kind": "method",
+              "name": "sayHello",
+              "return": {
+                "type": {
+                  "text": "string"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "heading",
+                  "type": {
+                    "text": "string"
+                  },
+                  "description": "The heading to say \"Hello\" to"
+                }
+              ],
+              "description": "Formats a greeting"
+            },
+            {
+              "kind": "field",
+              "name": "styles",
+              "type": {
+                "text": "array"
+              },
+              "static": true,
+              "default": "[\n      (superClass as unknown as typeof LitElement).styles ?? [],\n      css`\n        .highlight {\n          background: lightsalmon;\n        }\n      `,\n    ]",
+              "inheritedFrom": {
+                "name": "HighlightableMixin",
+                "module": "src/highlightable.ts"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "highlight",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "highlight",
+              "inheritedFrom": {
+                "name": "HighlightableMixin",
+                "module": "src/highlightable.ts"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "renderHighlight",
+              "parameters": [
+                {
+                  "name": "content",
+                  "type": {
+                    "text": "unknown"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "HighlightableMixin",
+                "module": "src/highlightable.ts"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "counterchange",
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": "Indicates when the count changes"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "heading",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Hey there'",
+              "description": "The heading to say \"Hello\" to.",
+              "fieldName": "heading"
+            },
+            {
+              "name": "counter",
+              "type": {
+                "text": "number"
+              },
+              "default": "5",
+              "description": "The number of times the button has been clicked.",
+              "fieldName": "counter"
+            },
+            {
+              "name": "highlight",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "highlight",
+              "inheritedFrom": {
+                "name": "HighlightableMixin",
+                "module": "src/highlightable.ts"
+              }
+            }
+          ],
+          "mixins": [
+            {
+              "name": "HighlightableMixin",
+              "module": "/src/highlightable.js"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CemLabsTs",
+          "declaration": {
+            "name": "CemLabsTs",
+            "module": "src/CemLabsTs.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/highlightable.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "HighlightableInterface",
+          "members": [
+            {
+              "kind": "field",
+              "name": "highlight",
+              "type": {
+                "text": "boolean"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "renderHighlight",
+              "return": {
+                "type": {
+                  "text": "unknown"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "content",
+                  "type": {
+                    "text": "unknown"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "kind": "mixin",
+          "description": "",
+          "name": "HighlightableMixin",
+          "members": [
+            {
+              "kind": "field",
+              "name": "styles",
+              "type": {
+                "text": "array"
+              },
+              "static": true,
+              "default": "[\n      (superClass as unknown as typeof LitElement).styles ?? [],\n      css`\n        .highlight {\n          background: lightsalmon;\n        }\n      `,\n    ]"
+            },
+            {
+              "kind": "field",
+              "name": "highlight",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "highlight"
+            },
+            {
+              "kind": "method",
+              "name": "renderHighlight",
+              "parameters": [
+                {
+                  "name": "content",
+                  "type": {
+                    "text": "unknown"
+                  }
+                }
+              ]
+            }
+          ],
+          "attributes": [
+            {
+              "name": "highlight",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "highlight"
+            }
+          ],
+          "parameters": [
+            {
+              "name": "superClass",
+              "type": {
+                "text": "T"
+              }
+            }
+          ],
+          "mixins": [
+            {
+              "name": "dedupeMixin",
+              "package": "@open-wc/dedupe-mixin"
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "HighlightableInterface",
+          "declaration": {
+            "name": "HighlightableInterface",
+            "module": "src/highlightable.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "HighlightableMixin",
+          "declaration": {
+            "name": "HighlightableMixin",
+            "module": "src/highlightable.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/styles/cem-labs-ts-styles.css.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "styles",
+          "default": "css`:host {\n  display: block;\n  box-sizing: border-box;\n}\n\n:host([hidden]),\n[hidden] {\n  display: none !important;\n}\n\n*,\n*::before,\n*::after {\n  box-sizing: inherit;\n}`"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "styles",
+          "declaration": {
+            "name": "styles",
+            "module": "src/styles/cem-labs-ts-styles.css.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "define/cem-labs-ts.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "An example element - define.",
+          "name": "BlkCemLabsTs",
+          "superclass": {
+            "name": "CemLabsTs",
+            "module": "/src/CemLabsTs.js"
+          },
+          "tagName": "cem-labs-ts",
+          "customElement": true,
+          "attributes": [
+            {
+              "name": "highlight",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "highlight",
+              "inheritedFrom": {
+                "name": "CemLabsTs",
+                "module": "src/CemLabsTs.ts"
+              }
+            },
+            {
+              "name": "heading",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Hey there'",
+              "description": "The heading to say \"Hello\" to.",
+              "fieldName": "heading",
+              "inheritedFrom": {
+                "name": "CemLabsTs",
+                "module": "src/CemLabsTs.ts"
+              }
+            },
+            {
+              "name": "counter",
+              "type": {
+                "text": "number"
+              },
+              "default": "5",
+              "description": "The number of times the button has been clicked.",
+              "fieldName": "counter",
+              "inheritedFrom": {
+                "name": "CemLabsTs",
+                "module": "src/CemLabsTs.ts"
+              }
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "styles",
+              "type": {
+                "text": "array"
+              },
+              "static": true,
+              "default": "[\n      (superClass as unknown as typeof LitElement).styles ?? [],\n      css`\n        .highlight {\n          background: lightsalmon;\n        }\n      `,\n    ]",
+              "inheritedFrom": {
+                "name": "CemLabsTs",
+                "module": "src/CemLabsTs.ts"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "highlight",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "highlight",
+              "inheritedFrom": {
+                "name": "CemLabsTs",
+                "module": "src/CemLabsTs.ts"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "renderHighlight",
+              "parameters": [
+                {
+                  "name": "content",
+                  "type": {
+                    "text": "unknown"
+                  }
+                }
+              ],
+              "inheritedFrom": {
+                "name": "CemLabsTs",
+                "module": "src/CemLabsTs.ts"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "heading",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Hey there'",
+              "description": "The heading to say \"Hello\" to.",
+              "attribute": "heading",
+              "inheritedFrom": {
+                "name": "CemLabsTs",
+                "module": "src/CemLabsTs.ts"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "counter",
+              "type": {
+                "text": "number"
+              },
+              "default": "5",
+              "description": "The number of times the button has been clicked.",
+              "attribute": "counter",
+              "inheritedFrom": {
+                "name": "CemLabsTs",
+                "module": "src/CemLabsTs.ts"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "#onClick",
+              "inheritedFrom": {
+                "name": "CemLabsTs",
+                "module": "src/CemLabsTs.ts"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "sayHello",
+              "return": {
+                "type": {
+                  "text": "string"
+                }
+              },
+              "parameters": [
+                {
+                  "name": "heading",
+                  "type": {
+                    "text": "string"
+                  },
+                  "description": "The heading to say \"Hello\" to"
+                }
+              ],
+              "description": "Formats a greeting",
+              "inheritedFrom": {
+                "name": "CemLabsTs",
+                "module": "src/CemLabsTs.ts"
+              }
+            }
+          ],
+          "events": [
+            {
+              "name": "counterchange",
+              "type": {
+                "text": "CustomEvent"
+              },
+              "description": "Indicates when the count changes",
+              "inheritedFrom": {
+                "name": "CemLabsTs",
+                "module": "src/CemLabsTs.ts"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "BlkCemLabsTs",
+          "declaration": {
+            "name": "BlkCemLabsTs",
+            "module": "define/cem-labs-ts.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "cem-labs-ts",
+          "declaration": {
+            "name": "BlkCemLabsTs",
+            "module": "define/cem-labs-ts.ts"
+          }
+        }
+      ]
+    }
+  ]
+}
